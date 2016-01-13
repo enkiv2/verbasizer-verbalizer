@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+(./verbasizer $@ | tee /dev/stderr | ./verbalizer ) 2>&1
+

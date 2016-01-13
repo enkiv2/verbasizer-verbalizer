@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+if (which flite 2>&1) > /dev/null ; then
+	flite
+else
+	if (which espeak 2>&1) > /dev/null ; then
+		espeak --stdin
+	else
+		if (which festival 2>&1) > /dev/null ; then
+			festival --tts
+		else
+			echo "No acceptable synthesizer found" >&2
+			exit 1
+		fi
+	fi
+fi
