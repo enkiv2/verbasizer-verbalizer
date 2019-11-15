@@ -1,6 +1,12 @@
 # verbasizer-verbalizer
 Column-based cutups with speech synthesis
 
+Based on descriptions of David Bowie's "verbasizer" script, which he used in generating the lyrics for Outside.
+
+Verbasizer reads text from stdin, and cuts it into *n* columns (by default, 5; the first arg to the script overrides this). It then reorders the contents of each column randomly and pastes the columns back together.
+
+The verbalizer script is a helper for picking a speech synthesizer (out of several common ones for unix-like systems). The verbasizer-verbalizer script composes these two programs.
+
 Sample usage:
 
 ```
